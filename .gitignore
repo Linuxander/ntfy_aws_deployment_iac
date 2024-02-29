@@ -1,0 +1,12 @@
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+terraform.*
+.terraform.lock.hcl
+.terraform/
+
