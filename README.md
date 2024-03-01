@@ -50,13 +50,13 @@ Once you have accomplished the above steps, clone this repository and deploy the
 1. Run `terraform init`
 1. Run `terraform apply`
 1. Answer `yes` at the prompt
-1. Once complete, copy the public IP address of the NTFY EC2 instance from the `ntfy_server_instance__public_ip` output
+1. Once complete, copy the public IP address of the NTFY EC2 instance from the `ntfs_server_instance_public_ip` output
 
 The output looks like this:
 ```
 Outputs:
 
-ntfy_server_instance__public_ip = "COPY THE IP ADDRESS HERE"
+ntfs_server_instance_public_ip = "COPY THE IP ADDRESS HERE"
 ```
 
 # Verify NTFY server is up by accessing the NTFY dashboard
