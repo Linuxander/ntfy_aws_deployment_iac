@@ -10,7 +10,7 @@ Once the Terraform automation scripts are complete, copy the severs public IP ad
 After your command, append the following code to obtain notifications on success:
 
 ```
-&& curl -d "The complete message you want to see in the notification goes here" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone]
+&& curl -d "[ENTER SUCCESS MESSAGE HERE]" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[ENTER TOPIC SUBSCRIBED ON PHONE HERE]
 ```
 
 ### Command Syntax for Failure Notifications
@@ -18,7 +18,7 @@ After your command, append the following code to obtain notifications on success
 After your command, append the following code to obtain notifications on failure:
 
 ```
-|| curl -d "The command failed message goes here" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone]
+|| curl -d "[ENTER FAIL MESSAGE HERE]" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[ENTER TOPIC SUBSCRIBED ON PHONE HERE]
 ```
 
 ### Combine them to get notified when something fails or succeeds
@@ -56,7 +56,7 @@ The output looks like this:
 ```
 Outputs:
 
-ntfs_server_instance_public_ip = "COPY THE IP ADDRESS HERE"
+ntfs_server_instance_public_ip = "[COPY IP VALUE FROM HERE]"
 ```
 
 # Verify NTFY server is up by accessing the NTFY dashboard
@@ -81,7 +81,7 @@ This is just a verification step; nothing else needs to be configured in this se
 Here's the fun part. After you follow these steps, you should see the notification on your phone.
 
 1. Open a terminal window
-1. Enter the command `curl -d "Hello world!" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone goes here]`
+1. Enter the command `curl -d "Hello world!" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[ENTER TOPIC SUBSCRIBED ON PHONE HERE goes here]`
 1. Hit `Enter`
 1. You should now have received a notification on your phone
 
