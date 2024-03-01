@@ -59,7 +59,8 @@ This is just a verification step; nothing else needs to be configured in this se
 
 1. Open the NTFY phone app
 1. Click the `+` symbol to subscribe to a topic
-1. Type in the topic name you want the phone to listen to
+1. In the `Topic name` textfield, makeup a topic name
+    1. The topic name you create will recieve messages from the commands in a terminal that uses the same topic name
 1. Enable the switch for `Use another server` feature
 1. Enter `http://[ENTER ntfs_server_instance_public_ip VALUE HERE]`
 
