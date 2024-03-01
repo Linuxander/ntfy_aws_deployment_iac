@@ -118,6 +118,6 @@ Apply these changes by running the following command:
 terraform apply
 ```
 
-You should now only be able to access the ntfy server dashboard form the ip's in the http txt file.
+You should now only be able to access the ntfy server dashboard form the IPs listed in the `allowed_ips_for_http.txt` file.
 
-You should now only be able to ssh into the EC2 server following the NTFY instances' connect isntruction from the public IP listed in the ssh txt file.
+You should now only be able to ssh into the EC2 server following the NTFY instances' connect isntruction from the IPs listed in the `allowed_ips_for_ssh.txt` file.
