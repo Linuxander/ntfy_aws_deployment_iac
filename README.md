@@ -35,7 +35,7 @@ This repository allows you to deploy an NTFY server quickly on the AWS platform 
 You will need to have satisfied the following prerequisites to use this repository:
 1. Create an AWS account
 1. Go to AWS Key Pair and create a key pair named `aws_key_pair_ec2_ntfy_server`
-    1. Download the .pem file and then you can later log into the server from your local machine following AWS connect instructions on the EC2 instance
+    1. Download the `.pem` file and then you can later log into the server from your local machine following AWS connect instructions on the EC2 instance
 1. Install AWS CLI
 1. Configure AWS CLI with your account
 1. Install Terraform
@@ -47,20 +47,21 @@ Once you have accomplished the above steps, clone this repository and deploy the
 
 1. Clone this repostory
 1. Change your directory inside the repository
-1. Run terraform init
-1. Run terraform apply
-1. Answer yes at the prompt
+1. Run `terraform init`
+1. Run `terraform apply`
+1. Answer `yes` at the prompt
 1. Once complete, follow the next steps
 
 # Verify NTFY server is up by accessing the NTFY dashboard
 
 This is just a verification step; nothing else needs to be configured in this section.
+
 1. Log into the AWS console
 1. Go to EC2 instance page
 1. Click on the NTFY Server instance to get its details
 1. Copy the public IP address
 1. Open a browser
-1. Go to http://[EC2 instance IP address]
+1. Go to http://[EC2 public IP]
 1. You should now see the NTFY server dashboard
 
 # NTFY Phone App | Subscribe to a topic
@@ -76,13 +77,13 @@ This is just a verification step; nothing else needs to be configured in this se
 Here's the fun part. After you follow these steps, you should see the notification on your phone.
 
 1. Open a terminal window
-1. Enter the command `curl -d "Hello world!" http://[EC2 public IP]/[topic you subscribed to on your phone goes here]
-1. Hit Enter
+1. Enter the command `curl -d "Hello world!" http://[EC2 public IP]/[topic you subscribed to on your phone goes here]`
+1. Hit `Enter`
 1. You should now have received a notification on your phone
 
 # Security
 
-This terraform script by default allows all http/https, and ssh connections from anywhere (0.0.0.0/0).  
+This terraform script by default allows all http/https, and ssh connections from anywhere (`0.0.0.0/0`).  
 
 There are two files where you can list the allowed IP's you want to grant access to.
 
