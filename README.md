@@ -7,11 +7,15 @@ Once the Terraform automation scripts are complete, you can fetch the EC2 instan
 
 When you run commands on your laptop that take long, you can append the following code to your command, and the NTFY EC2 server will notify all subscribed devices after it completes:
 
+```
 && curl -d "The complete message you want to see in the notification goes here" http://[EC2 IP goes here]/[topic you created on the NTFY EC2 server goes here]
+```
 
 If you also want to know if the command fails, you can append the following command after the one mentioned above to tailor your message for the failure:
 
+```
 || curl -d "The command failed message goes here" http://[EC2 IP goes here]/[topic you created on the NTFY EC2 server goes here]
+```
 
 This repository allows you to deploy an NTFY server quickly on the AWS platform whenever you need it and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
 
