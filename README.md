@@ -7,7 +7,7 @@ Once the Terraform automation scripts are complete, copy the severs public IP ad
 
 # Process Overview
 
-To get this up and running you will need to follow the directions below which consists of:
+To get this up and running, you will need to follow the directions below which consists of:
 
 1. Complete the prerequisites
 1. Run `terraform init`
