@@ -50,18 +50,22 @@ Once you have accomplished the above steps, clone this repository and deploy the
 1. Run `terraform init`
 1. Run `terraform apply`
 1. Answer `yes` at the prompt
-1. Once complete, follow the next steps
+1. Once complete, copy the public IP address of the NTFY EC2 instance from the `ntfy_server_instance__public_ip` output
+
+The output looks like this:
+```
+Outputs:
+
+ntfy_server_instance__public_ip = "COPY THE IP ADDRESS HERE"
+```
 
 # Verify NTFY server is up by accessing the NTFY dashboard
 
 This is just a verification step; nothing else needs to be configured in this section.
 
-1. Log into the AWS console
-1. Go to EC2 instance page
-1. Click on the NTFY Server instance to get its details
-1. Copy the public IP address
+1. Wait about 20 seconds or so to allow the EC2 instance to finish installing
 1. Open a browser
-1. Go to `http://[EC2 public IP]`
+1. Go to `http://[Enter ntfy_server_instance__public_ip IP address here]`
 1. You should now see the NTFY server dashboard
 
 # NTFY Phone App | Subscribe to a topic
