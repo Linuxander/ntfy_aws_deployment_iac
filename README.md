@@ -3,7 +3,7 @@
 
 This repository is to simplify the deployment and configuration of that NTFY server on the AWS platform by Terraform automation.  The Terraform script in this repo deploys AWS VPC setup and an EC2 instance configured as an NTFY server with the additional steps to allow notifications to reach iOS devices.
 
-Once the Terraform automation scripts are complete, you can fetch the EC2 instance public IP address.  Use that public IP address to configure your NTFY phone app to listen to notifications.  When you run commands on your computer terminal and append the code below, you will see them pop up on your phone with your commands complete or fail.
+Once the Terraform automation scripts are complete, copy the severs public IP address from the `ntfs_server_instance_public_ip` output.  Use that IP address to configure the NTFY phone app to listen to notifications.  When you run commands on your computer terminal and append the code below, you will see them pop up on your phone with your commands complete or fail.
 
 ### Command Syntax for Success Notifications
 
