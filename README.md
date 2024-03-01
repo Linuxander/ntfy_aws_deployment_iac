@@ -13,7 +13,8 @@ To get this up and running you will need to follow the directions below which co
 1. Run `terraform init`
 1. Run `terraform apply`
 1. Configure NTFY app on your phone with NTFY server IP
-1. Run any command with the NTFY curl command to get phone notifications on command success or failure.
+1. Append the NTFY command after any command using `&&` and you will be notified on your phone when it completes successfully
+    1. You can also append `||` followed by the NTFY failure message command to be notified if the command failed right on your phone
 
 # Steps
 
