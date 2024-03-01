@@ -100,7 +100,7 @@ To get either a failed or success notification on your phone for one command, yo
 
 This repository allows you to deploy an NTFY server quickly on the AWS platform whenever you need it and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
 
-# Additional Info | Security
+# Security Instructions
 
 This terraform script by default allows all http/https, and ssh connections from anywhere (`0.0.0.0/0`).  
 
