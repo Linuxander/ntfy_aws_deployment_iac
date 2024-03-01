@@ -116,9 +116,9 @@ curl ipinfo.io/ip
 
 You can also obtain it from a website called `www.ipchicken.com`
 
-### Update http/https allowed IP list
+### Update allowed_ips_for_http.txt for restricted http/https access
 
-The `/networking/data/allowed_ips_for_http.txt` file is where you can list the public IP addresses you want to allow http/https access from.  
+The `/networking/data/allowed_ips_for_http.txt` file is where you can add the list of IPs you want to allow http/https access.  
 
 The syntax for multiple IP's should look like this:
 
@@ -129,9 +129,9 @@ The syntax for multiple IP's should look like this:
 
 Change only the IP address in front of the `/32` characters.
 
-### Update ssh allowed IP list
+### Update allowed_ips_for_ssh.txt for restricted ssh access
 
-The `/networking/data/allowed_ips_for_ssh.txt` file is where you can list the public IP addresses you want to allow ssh access from.  
+The `/networking/data/allowed_ips_for_ssh.txt` file is where you can add the list of IPs you want to allow ssh access.
 
 The syntax for multiple IP's should look like this:
 
