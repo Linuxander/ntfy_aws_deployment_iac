@@ -10,7 +10,7 @@ Once the Terraform automation scripts are complete, copy the severs public IP ad
 After your command, append the following code to obtain notifications on success:
 
 ```
-&& curl -d "The complete message you want to see in the notification goes here" http://[EC2 IP goes here]/[topic you subscribed to on your phone]
+&& curl -d "The complete message you want to see in the notification goes here" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone]
 ```
 
 ### Command Syntax for Failure Notifications
@@ -18,7 +18,7 @@ After your command, append the following code to obtain notifications on success
 After your command, append the following code to obtain notifications on failure:
 
 ```
-|| curl -d "The command failed message goes here" http://[EC2 IP goes here]/[topic you subscribed to on your phone]
+|| curl -d "The command failed message goes here" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone]
 ```
 
 ### Combine them to get notified when something fails or succeeds
@@ -26,7 +26,7 @@ After your command, append the following code to obtain notifications on failure
 To get either a failed or success notification on your phone for one command, you can do something like this:
 
 ```
-[any command goes here] && curl -d "Command succeeded! :)" http://[EC2 public IP]/[topic] || curl -d "Command failed. :(" http://[EC2 public IP]/[topic]
+[any command goes here] && curl -d "Command succeeded! :)" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic] || curl -d "Command failed. :(" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic]
 ```
 
 This repository allows you to deploy an NTFY server quickly on the AWS platform whenever you need it and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
@@ -65,7 +65,7 @@ This is just a verification step; nothing else needs to be configured in this se
 
 1. Wait about 20 seconds or so to allow the EC2 instance to finish installing the NTFY server
 1. Open a browser
-1. Go to `http://[Enter ntfy_server_instance__public_ip IP address here]`
+1. Go to `http://[ENTER ntfs_server_instance_public_ip VALUE HERE]`
 1. You should now see the NTFY server dashboard.  If not, wait a few seconds more and refresh page.
 
 # NTFY Phone App | Subscribe to a topic
@@ -74,14 +74,14 @@ This is just a verification step; nothing else needs to be configured in this se
 1. Click the `+` symbol to subscribe to a topic
 1. Type in the topic name you want the phone to listen to
 1. Enable the switch for `Use another server` feature
-1. Enter `http://[EC2 public IP]`
+1. Enter `http://[ENTER ntfs_server_instance_public_ip VALUE HERE]`
 
 # Command Line | Broadcast a message to Topic
 
 Here's the fun part. After you follow these steps, you should see the notification on your phone.
 
 1. Open a terminal window
-1. Enter the command `curl -d "Hello world!" http://[EC2 public IP]/[topic you subscribed to on your phone goes here]`
+1. Enter the command `curl -d "Hello world!" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic you subscribed to on your phone goes here]`
 1. Hit `Enter`
 1. You should now have received a notification on your phone
 
@@ -137,4 +137,4 @@ terraform apply
 
 You should now only be able to access the ntfy server dashboard form the IPs listed in the `allowed_ips_for_http.txt` file.
 
-You should now only be able to ssh into the EC2 server following the NTFY instances' connect isntruction from the IPs listed in the `allowed_ips_for_ssh.txt` file.
+You should now only be able to ssh into the EC2 server following the NTFY instances' AWS Connect instructions from the IPs listed in the `allowed_ips_for_ssh.txt` file.
