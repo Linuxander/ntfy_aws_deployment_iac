@@ -106,7 +106,7 @@ This terraform script by default allows all http/https, and ssh connections from
 
 There are two files where you can list the allowed IPs you want to grant access to, and they will be applied to the appropriate security group rules.
 
-## Obtaining your public IP address
+### Obtaining your public IP address
 
 In a terminal, you can obtain your public IP with the following command:
 
@@ -116,7 +116,7 @@ curl ipinfo.io/ip
 
 You can also obtain it from a website called `www.ipchicken.com`
 
-## allowed_ips_for_http.txt
+### allowed_ips_for_http.txt
 
 The `/networking/data/allowed_ips_for_http.txt` file is where you can list the public IP addresses you want to allow http/https access from.  
 
@@ -129,7 +129,7 @@ The syntax for multiple IP's should look like this:
 
 Change only the IP address in front of the `/32` characters.
 
-## allowed_ips_for_ssh.txt
+### allowed_ips_for_ssh.txt
 
 The `/networking/data/allowed_ips_for_ssh.txt` file is where you can list the public IP addresses you want to allow ssh access from.  
 
@@ -142,7 +142,7 @@ The syntax for multiple IP's should look like this:
 
 Change only the IP address in front of the `/32` characters.
 
-## Rerun terraform apply
+### Apply security changes using `terraform apply`
 
 Apply these changes by running the following command:
 
