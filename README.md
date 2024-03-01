@@ -61,7 +61,7 @@ This is just a verification step; nothing else needs to be configured in this se
 1. Click on the NTFY Server instance to get its details
 1. Copy the public IP address
 1. Open a browser
-1. Go to http://[EC2 public IP]
+1. Go to `http://[EC2 public IP]`
 1. You should now see the NTFY server dashboard
 
 # NTFY Phone App | Subscribe to a topic
@@ -70,7 +70,7 @@ This is just a verification step; nothing else needs to be configured in this se
 1. Click the + symbol to subscribe to a topic
 1. Type in the topic name you want the phone to listen to
 1. Enable the Use another server
-1. Enter http://[EC2 public IP]
+1. Enter `http://[EC2 public IP]`
 
 # Command Line | Broadcast a message to Topic
 
