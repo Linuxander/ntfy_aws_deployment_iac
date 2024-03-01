@@ -39,7 +39,7 @@ You will need to have satisfied the following prerequisites to use this reposito
 1. Install AWS CLI
 1. Configure AWS CLI with your account
 1. Install Terraform
-1. Install NTFY on your iOS/Android device
+1. Install [NTFY for iOS](https://apps.apple.com/us/app/ntfy/id1625396347) or [NTFY for Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy) on your phone
 
 Once you have accomplished the above steps, clone this repository and deploy the NTFY server to your AWS account.
 
