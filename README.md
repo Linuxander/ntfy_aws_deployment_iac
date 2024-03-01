@@ -85,7 +85,7 @@ Here's the fun part. After you follow these steps, you should see the notificati
 
 This terraform script by default allows all http/https, and ssh connections from anywhere (`0.0.0.0/0`).  
 
-There are two files where you can list the allowed IP's you want to grant access to.
+There are two files where you can list the allowed IPs you want to grant access to, and they will be applied to the appropriate security group rules.
 
 ## Obtaining your public IP address
 
