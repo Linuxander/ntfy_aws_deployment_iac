@@ -67,7 +67,7 @@ This is just a verification step; nothing else needs to be configured in this se
 # NTFY Phone App | Subscribe to a topic
 
 1. Open the NTFY phone app
-1. Click the + symbol to subscribe to a topic
+1. Click the `+` symbol to subscribe to a topic
 1. Type in the topic name you want the phone to listen to
 1. Enable the Use another server
 1. Enter `http://[EC2 public IP]`
