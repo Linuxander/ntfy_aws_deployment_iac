@@ -3,18 +3,30 @@
 
 This repository is to simplify the deployment and configuration of that NTFY server on the AWS platform by Terraform automation.  The Terraform script in this repo deploys AWS VPC setup and an EC2 instance configured as an NTFY server with the additional steps to allow notifications to reach iOS devices.
 
-Once the Terraform automation scripts are complete, you can fetch the EC2 instance IP address.   Access that IP address in your browser (http://[EC2 public IP]) and create a topic for your devices to subscribe to.  
+Once the Terraform automation scripts are complete, you can fetch the EC2 instance public IP address.  Use that public IP address to configure your NTFY phone app to listen to notifications.  When you run commands on your computer terminal and append the code below, you will see them pop up on your phone with your commands complete or fail.
 
-When you run commands on your laptop that take long, you can append the following code to your command, and the NTFY EC2 server will notify all subscribed devices after it completes:
+### Command Syntax for Success Notifications
 
-```
-&& curl -d "The complete message you want to see in the notification goes here" http://[EC2 IP goes here]/[topic you created on the NTFY EC2 server goes here]
-```
-
-If you also want to know if the command fails, you can append the following command after the one mentioned above to tailor your message for the failure:
+After your command, append the following code to obtain notifications on success:
 
 ```
-|| curl -d "The command failed message goes here" http://[EC2 IP goes here]/[topic you created on the NTFY EC2 server goes here]
+&& curl -d "The complete message you want to see in the notification goes here" http://[EC2 IP goes here]/[topic you subscribed to on your phone]
+```
+
+### Command Syntax for Failure Notifications
+
+After your command, append the following code to obtain notifications on failure:
+
+```
+|| curl -d "The command failed message goes here" http://[EC2 IP goes here]/[topic you subscribed to on your phone]
+```
+
+### Combine them to get notified when something fails or succeeds
+
+To get either a failed or success notification on your phone for one command, you can do something like this:
+
+```
+[any command goes here] && curl -d "Command succeeded! :)" http://[EC2 public IP]/[topic] || curl -d "Command failed. :(" http://[EC2 public IP]/[topic]
 ```
 
 This repository allows you to deploy an NTFY server quickly on the AWS platform whenever you need it and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
