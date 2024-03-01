@@ -6,13 +6,13 @@ provider "aws" {
 }
 
 module "networking" {
-  source     = "./networking"
+  source = "./networking"
 }
 
 module "ec2_ntfy" {
-  source                   = "./instances/ec2_ntfy"
+  source             = "./instances/ec2_ntfy"
   netmod_ntfy_vpc_id = module.networking.project_ntfy_vpc_id
-  netmod_ntfy_sg_id     = module.networking.ntfy_sg_id
-  netmod_ntfy_sub_id    = module.networking.ntfy_sub_id
+  netmod_ntfy_sg_id  = module.networking.ntfy_sg_id
+  netmod_ntfy_sub_id = module.networking.ntfy_sub_id
 }
 

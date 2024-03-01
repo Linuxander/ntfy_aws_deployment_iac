@@ -11,8 +11,8 @@ locals {
 }
 
 data "aws_ami" "latest_t3_micro_ami" {
-  most_recent      = true
-  owners           = ["amazon"]
+  most_recent = true
+  owners      = ["amazon"]
 
   filter {
     name   = "name"
