@@ -10,8 +10,32 @@ locals {
   project_name = "NTFY-SERVER"
 }
 
+data "aws_ami" "latest_t3_micro_ami" {
+  most_recent      = true
+  owners           = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-hvm-*-gp2"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+}
 resource "aws_instance" "ec2_ntfy" {
-  ami           = "ami-0440d3b780d96b29d"
+  ami           = data.aws_ami.latest_t3_micro_ami.id
   instance_type = "t3.micro"
 
   key_name   = "aws_key_pair_ec2_ntfy_server"
