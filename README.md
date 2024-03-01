@@ -63,10 +63,10 @@ ntfy_server_instance__public_ip = "COPY THE IP ADDRESS HERE"
 
 This is just a verification step; nothing else needs to be configured in this section.
 
-1. Wait about 20 seconds or so to allow the EC2 instance to finish installing
+1. Wait about 20 seconds or so to allow the EC2 instance to finish installing the NTFY server
 1. Open a browser
 1. Go to `http://[Enter ntfy_server_instance__public_ip IP address here]`
-1. You should now see the NTFY server dashboard
+1. You should now see the NTFY server dashboard.  If not, wait a few seconds more and refresh page.
 
 # NTFY Phone App | Subscribe to a topic
 
