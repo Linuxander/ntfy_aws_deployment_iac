@@ -10,11 +10,10 @@ Once the Terraform automation scripts are complete, copy the severs public IP ad
 To get this up and running, you will need to follow the directions below which consists of:
 
 1. Complete the prerequisites
-1. Run `terraform init`
-1. Run `terraform apply`
-1. Use the IP provided in the output to configure your NTFY phone app with the server
-1. Append the NTFY command after any command using `&&` and you will be notified on your phone when it completes successfully
-    1. You can also append `||` followed by the NTFY failure message command to be notified if the command fails right on your phone
+1. Clone this repo and `cd` into it
+1. Deploy by running `terraform init` and then `terraform apply` commands
+1. Configure NTFY app on your phone using the IP provided in the output above
+1. Run commands in your terminal with NTFY commands to get notifications on your phone
 
 # Steps
 
