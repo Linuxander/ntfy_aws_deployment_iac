@@ -12,9 +12,9 @@ To get this up and running, you will need to follow the directions below which c
 1. Complete the prerequisites
 1. Run `terraform init`
 1. Run `terraform apply`
-1. Configure NTFY app on your phone with NTFY server IP
+1. Use the IP provided in the output to configure your NTFY phone app with the server
 1. Append the NTFY command after any command using `&&` and you will be notified on your phone when it completes successfully
-    1. You can also append `||` followed by the NTFY failure message command to be notified if the command failed right on your phone
+    1. You can also append `||` followed by the NTFY failure message command to be notified if the command fails right on your phone
 
 # Steps
 
@@ -32,7 +32,7 @@ Once you have accomplished the above steps, clone this repository and deploy the
 
 ### Step 2 | Terraform Instruction
 
-1. Clone this repostory
+1. Clone this repository
 1. Change your directory inside the repository
 1. Run `terraform init`
 1. Run `terraform apply`
@@ -53,14 +53,14 @@ This is just a verification step; nothing else needs to be configured in this se
 1. Wait about 20 seconds or so to allow the EC2 instance to finish installing the NTFY server
 1. Open a browser
 1. Go to `http://[ENTER ntfs_server_instance_public_ip VALUE HERE]`
-1. You should now see the NTFY server dashboard.  If not, wait a few seconds more and refresh page.
+1. You should now see the NTFY server dashboard.  If not, wait a few seconds more and refresh the page.
 
 ### Step 4 | NTFY Phone App | Subscribe to a topic
 
 1. Open the NTFY phone app
 1. Click the `+` symbol to subscribe to a topic
-1. In the `Topic name` textfield, makeup a topic name
-    1. The topic name you create will recieve messages from the commands in a terminal that uses the same topic name
+1. In the `Topic name` text field, makeup a topic name
+    1. The topic name you create will receive messages from the commands in a terminal that uses the same topic name
 1. Enable the switch for `Use another server` feature
 1. Enter `http://[ENTER ntfs_server_instance_public_ip VALUE HERE]`
 
@@ -99,7 +99,7 @@ To get either a failed or success notification on your phone for one command, yo
 [any command goes here] && curl -d "Command succeeded! :)" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic] || curl -d "Command failed. :(" http://[ENTER ntfs_server_instance_public_ip VALUE HERE]/[topic]
 ```
 
-This repository allows you to deploy an NTFY server quickly on the AWS platform whenever you need it and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
+This repository allows you to deploy an NTFY server quickly on the AWS platform whenever needed and destroy the resources when you no longer use it.  It is handy when you want to avoid babysitting the command terminal during procedures that take a while.
 
 # Security Instructions
 
@@ -121,7 +121,7 @@ You can also obtain it from a website called `www.ipchicken.com`
 
 The `/networking/data/allowed_ips_for_http.txt` file is where you can add the list of IPs you want to allow http/https access.  
 
-The syntax for multiple IP's should look like this:
+The syntax for multiple IPs should look like this:
 
 ```
 1.2.3.4/32
@@ -134,14 +134,14 @@ Change only the IP address in front of the `/32` characters.
 
 The `/networking/data/allowed_ips_for_ssh.txt` file is where you can add the list of IPs you want to allow ssh access.
 
-The syntax for multiple IP's should look like this:
+The syntax for multiple IPs should look like this:
 
 ```
 1.2.3.4/32
 5.6.7.8/32
 ```
 
-Change only the IP address in front of the `/32` characters.
+Change only the IP address before the `/32` characters.
 
 ### Apply security changes using `terraform apply`
 
@@ -151,6 +151,6 @@ Apply these changes by running the following command:
 terraform apply
 ```
 
-You should now only be able to access the ntfy server dashboard form the IPs listed in the `allowed_ips_for_http.txt` file.
+You should now only be able to access the ntfy server dashboard from the IPs listed in the `allowed_ips_for_http.txt` file.
 
 You should now only be able to ssh into the EC2 server following the NTFY instances' AWS Connect instructions from the IPs listed in the `allowed_ips_for_ssh.txt` file.
