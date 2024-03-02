@@ -1,21 +1,21 @@
 # About
-[NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  
+[NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  This is extremely useful when you have command procedures that take several minutes to complete. Leveraging their notification software allows you to progress on other tasks or even walk away from the computer, knowing you will be notified of the results.
 
-The setup described in the NTFY website allows you to deploy it as a docker container.  Doing so requires you to manually set it up on your laptop or cloud infrastructure to get it working.
+Although the NTFY website explains how to install and configure it on your laptop or in a cloud platform, it involves several manual steps.  This may be fine for some people, but it may become a tedious task for us. So why not automate this?
 
-This repository compliments the NTFY server app by simplifying and automating the infrastructure setup on the AWS cloud platform.  Since Terraform drives it, you can deploy it when needed and destroy it when you don't with minimal effort.
+That is where this repository comes in.  It simplifies the NTFY server setup through Terraform automation on the AWS cloud platform.  Since Terraform drives it, you can deploy it when needed and destroy it when you don't with minimal effort.
 
-It does this by creating VPC and EC2 resources for you on your AWS account.  It also provides you with the server's public IP address required to complete your phone's NTFY app configuration to start receiving notifications.
+It creates VPC and EC2 resources for you on your AWS account.  It also provides the server's public IP address required to complete your phone's NTFY app configuration to start receiving notifications.
 
 # Process Overview
 
-To get this up and running, you will need to follow the directions below which consists of:
+To get this up and running, you will need to follow the directions below, which consists of:
 
 1. Complete the prerequisites
 1. Clone this repo and `cd` into it
 1. Deploy by running `terraform init` and then `terraform apply` commands
 1. Configure NTFY app on your phone using the IP provided in the output above
-1. Run any command in your terminal with NTFY commands to get success and/or failure notifications on your phone
+1. Run any command in your terminal with NTFY commands to get success and failure notifications on your phone
 
 # Steps
 
