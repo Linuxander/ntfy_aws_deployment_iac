@@ -1,7 +1,7 @@
 # About
 [NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  This is extremely useful when you have command procedures that take several minutes to complete. Leveraging their notification software allows you to progress on other tasks or even walk away from the computer, knowing you will be notified with the results.
 
-Although the NTFY website explains how to install and configure it on your laptop or in a cloud platform, it involves several manual steps.  This may be fine for some people, but it may become a tedious task for us.
+Although the NTFY website explains how to install and configure it on your laptop or in a cloud platform, it involves several manual steps.  This may be fine for some people, but it may become a tedious task for others.
 
 This repository simplifies that process for cloud engineers who already have an AWS development environment available. It uses Terraform automation to set up the NTFY server in their AWS account.  This allows you to deploy it when needed and destroy it when you don't with minimal effort.
 
