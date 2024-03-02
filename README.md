@@ -1,9 +1,11 @@
 # About
-[NTFY](https://ntfy.sh/) is a neat tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  You can deploy and configure this as a docker image on your computer or a cloud server.
+[NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  
 
-This repository is to simplify the deployment and configuration of that NTFY server on the AWS platform by Terraform automation.  The Terraform script in this repo deploys AWS VPC setup and an EC2 instance configured as an NTFY server with the additional steps to allow notifications to reach iOS devices.
+The setup described in the NTFY website allows you to deploy it as a docker container.  Doing so requires you to manually set up your laptop's or the cloud's infrastructure to get it working.
 
-Once the Terraform automation scripts are complete, copy the severs public IP address from the `ntfs_server_instance_public_ip` output.  Use that IP address to configure the NTFY phone app to listen to notifications.  When you run commands on your computer terminal and append the code below, you will see them pop up on your phone with your commands complete or fail.
+This repository compliments the NTFY server app by simplifying and automating the infrastructure setup on the AWS cloud platform.  It also allows you to deploy it when needed and destroy it when you don't with minimal effort.
+
+It does this by creating VPC and EC2 resources on your AWS account and providing you the server's IP address needed to connect your phone to listen to notifications.
 
 # Process Overview
 
