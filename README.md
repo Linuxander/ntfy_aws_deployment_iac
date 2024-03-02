@@ -1,9 +1,9 @@
 # About
 [NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  This is extremely useful when you have command procedures that take several minutes to complete. Leveraging their notification software allows you to progress on other tasks or even walk away from the computer, knowing you will be notified of the results.
 
-Although the NTFY website explains how to install and configure it on your laptop or in a cloud platform, it involves several manual steps.  This may be fine for some people, but it may become a tedious task for us. So why not automate this?
+Although the NTFY website explains how to install and configure it on your laptop or in a cloud platform, it involves several manual steps.  This may be fine for some people, but it may become a tedious task for us.
 
-That is where this repository comes in.  It simplifies the NTFY server setup for cloud engineers who may already have an AWS environment ready to go. It does this using Terraform automation which sets it up on the AWS cloud platform.  Since Terraform drives it, you can deploy it when needed and destroy it when you don't with minimal effort.
+This repository simplifies that process for cloud engineers who already have an AWS development environment available. It uses Terraform automation to setup the NTFY server in their AWS account.  This gives you the ability to deploy it when needed and destroy it when you don't with minimal effort.
 
 It creates VPC and EC2 resources for you on your AWS account.  It also provides the server's public IP address required to complete your phone's NTFY app configuration to start receiving notifications.
 
@@ -14,7 +14,7 @@ To get this up and running, you will need to follow the directions below, which 
 1. Complete the prerequisites
 1. Clone this repo and `cd` into it
 1. Deploy by running `terraform init` and then `terraform apply` commands
-1. Configure NTFY app on your phone using the IP info provided in step 3’s output
+1. Configure the NTFY app on your phone using the IP info provided in step 3’s output
 1. Run any command in your terminal with NTFY commands to get success and failure notifications on your phone
 
 # Steps
