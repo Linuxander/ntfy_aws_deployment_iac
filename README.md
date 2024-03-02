@@ -5,7 +5,7 @@ Although the NTFY website explains how to install and configure it on your lapto
 
 This repository simplifies that process for cloud engineers who already have an AWS development environment available. It uses Terraform automation to set up the NTFY server in their AWS account.  This allows you to deploy it when needed and destroy it when you don't with minimal effort.
 
-After running this terraform project, you will have a dedicated NTFY setup with a configured VPC and EC2 instance as your NTFY server. The terraform output provides the server's public IP address. Use that IP to complete the NTFY notification app configuration on your phone. Then, run your everyday commands with additional NTFY commands appended to it.  When your long-running commands are complete, you will receive notifications on your phone.
+After running this terraform project, you will have a dedicated NTFY setup with a configured VPC and EC2 instance as your NTFY server. The terraform output provides the server's public IP address. Use that IP to complete your phones NTFY app configuration. Then, run your everyday commands with additional NTFY commands appended to it.  When your long-running commands are complete, you will receive notifications on your phone.
 
 # Process Overview
 
