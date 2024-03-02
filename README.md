@@ -1,7 +1,7 @@
 # About
 [NTFY](https://ntfy.sh/) is a tool that lets you obtain notifications on your laptop or iOS/Android phone when your terminal commands succeed or fail.  
 
-The setup described in the NTFY website allows you to deploy it as a docker container.  Doing so requires you to manually set up your laptop's or the cloud's infrastructure to get it working.
+The setup described in the NTFY website allows you to deploy it as a docker container.  Doing so requires you to manually set it up your laptop's or the cloud's infrastructure to get it working.
 
 This repository compliments the NTFY server app by simplifying and automating the infrastructure setup on the AWS cloud platform.  It also allows you to deploy it when needed and destroy it when you don't with minimal effort.
 
