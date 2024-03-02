@@ -15,7 +15,8 @@ To get this up and running, you will need to follow the directions below, which 
 1. Clone this repo and `cd` into it
 1. Deploy by running `terraform init` and then `terraform apply` commands. Copy the IP address from the final output. 
 1. Configure the NTFY app on your phone using the copied IP address.
-1. Run any command in your terminal with NTFY commands to get success and failure notifications on your phone.
+1. Run any command in your terminal with additional NTFY commands appended to it.
+1. You'll then receive success and failure notifications on your phone and smart watch.
 
 # Steps
 
