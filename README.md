@@ -3,7 +3,7 @@
 
 The setup described in the NTFY website allows you to deploy it as a docker container.  Doing so requires you to manually set it up on your laptop or cloud infrastructure to get it working.
 
-This repository compliments the NTFY server app by simplifying and automating the infrastructure setup on the AWS cloud platform.  It also allows you to deploy it when needed and destroy it when you don't with minimal effort.
+This repository compliments the NTFY server app by simplifying and automating the infrastructure setup on the AWS cloud platform.  Since Terraform drives it, you can deploy it when needed and destroy it when you don't with minimal effort.
 
 It does this by creating VPC and EC2 resources on your AWS account and providing you the server's IP address needed to connect your phone to listen to notifications.
 
