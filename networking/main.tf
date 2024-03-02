@@ -25,7 +25,7 @@ resource "aws_subnet" "project_ntfy_subnet" {
   vpc_id                  = aws_vpc.project_ntfy_vpc.id
   cidr_block              = var.subnet_cidr_ntfy
   map_public_ip_on_launch = true
-  availability_zone = "us-east-1a"
+  availability_zone       = "us-east-1a"
 
   tags = {
     Name = "${local.project_name} - subnet - ntfy"
