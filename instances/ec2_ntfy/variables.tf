@@ -1,22 +1,26 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
+variable "project_name" {
+  default = "ENTER_PROJECT_NAME_HERE"
+}
+
 variable "region" {
   description = "AWS region"
   default     = "us-east-1"
 }
 
-variable "netmod_ntfy_vpc_id" {
-  description = "Network module netmod_ntfy_vpc_id reference"
+variable "netmod_vpc_default_id" {
+  description = "Network module netmod_vpc_default_id reference"
   default     = ""
 }
 
-variable "netmod_ntfy_sg_id" {
-  description = "Network module netmod_ntfy_sg_id reference"
+variable "netmod_security_group_default_id" {
+  description = "Network module netmod_security_group_default_id reference"
   default     = ""
 }
 
-variable "netmod_ntfy_sub_id" {
-  description = "Network module netmod_ntfy_sub_id reference"
+variable "netmod_subnet_default_id" {
+  description = "Network module netmod_subnet_default_id reference"
   default     = ""
 }

@@ -1,14 +1,15 @@
-output "project_ntfy_vpc_id" {
-  description = "The ID of the project_ntfy_vpc"
-  value       = aws_vpc.project_ntfy_vpc.id
+output "vpc_default_id" {
+  description = "The ID of the vpc_default"
+  value       = aws_vpc.vpc_default.id
 }
 
-output "ntfy_sg_id" {
-  description = "The ID of the project_ntfy_securitygroup"
-  value       = aws_security_group.project_ntfy_securitygroup.id
+output "subnet_default_id" {
+  description = "The ID of the subnet_default"
+  value       = aws_subnet.subnet_default.id
 }
 
-output "ntfy_sub_id" {
-  description = "The ID of the project_ntfy_subnet"
-  value       = aws_subnet.project_ntfy_subnet.id
+output "security_group_default_id" {
+  description = "The ID of the security_group_default"
+  value       = aws_security_group.security_group_default.id
 }
+

@@ -6,13 +6,19 @@ provider "aws" {
 }
 
 module "networking" {
-  source = "./networking"
+  source                   = "./networking"
+  project_name             = "NTFY-SERVER"
+  region                   = var.region
+  vpc_default_cidr         = "10.3.0.0/16"
+  subnet_default_cidr      = "10.3.6.0/24"
+  route_table_default_cidr = "0.0.0.0/0"
 }
 
 module "ec2_ntfy" {
-  source             = "./instances/ec2_ntfy"
-  netmod_ntfy_vpc_id = module.networking.project_ntfy_vpc_id
-  netmod_ntfy_sg_id  = module.networking.ntfy_sg_id
-  netmod_ntfy_sub_id = module.networking.ntfy_sub_id
+  source                           = "./instances/ec2_ntfy"
+  project_name                     = "NTFY-SERVER"
+  netmod_vpc_default_id            = module.networking.vpc_default_id
+  netmod_subnet_default_id         = module.networking.subnet_default_id
+  netmod_security_group_default_id = module.networking.security_group_default_id
 }
 
