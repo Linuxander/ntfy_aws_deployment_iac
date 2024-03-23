@@ -1,13 +1,11 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 variable "project_name" {
-  default = "ENTER_PROJECT_NAME_HERE"
+  description = "Project name variable for tagging resources."
+  type        = string
 }
 
 variable "region" {
-  default     = "us-east-1"
   description = "AWS region"
+  type        = string
 }
 
 # --- BEGINS: vpc_default variables ---
